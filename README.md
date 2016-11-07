@@ -24,3 +24,10 @@ These may help:
 * There are [a lot](http://flask.pocoo.org/docs/0.11/deploying/) of Python WSGI web server options. Unless you specifically want to try a different one, go with [Gunicorn](http://docs.gunicorn.org/) (pronounced "G-unicorn").
 * You need to [reload nginx configuration](http://nginx.org/en/docs/beginners_guide.html#control) after you modify it for the changes to be picked up.
 * The [vagrant-address](https://github.com/mkuzmin/vagrant-address) plugin is useful for getting the IP address of your VM.
+
+## Discussion questions
+
+* What is the point of this exercise?
+* What is each command in your provisioning script doing?
+* How can you verify that each command is doing what you intend for it to? In other words, how would you test/troubleshoot this?
+* Why do we need nginx, Gunicorn, etc? Why not just use `flask run`?
