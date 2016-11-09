@@ -29,7 +29,8 @@ These may help:
 
 If you get the above working locally:
 
-1. Try using Vagrant to deploy the site to AWS
+1. Use Vagrant to deploy the site to Amazon Web Services (AWS)
+    * *Be very careful not to commit your AWS credentials to the repository.*
 1. Run the site in a Docker container
 
 ## Discussion questions
