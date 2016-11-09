@@ -25,9 +25,9 @@ These may help:
 * You need to [reload nginx configuration](http://nginx.org/en/docs/beginners_guide.html#control) after you modify it for the changes to be picked up.
 * The [vagrant-address](https://github.com/mkuzmin/vagrant-address) plugin is useful for getting the IP address of your VM.
 
-## Too easy?
+## Next steps
 
-If you get the above working locally:
+Once you get the above working locally:
 
 1. Use Vagrant to deploy the site to Amazon Web Services (AWS)
     * *Be very careful not to commit your AWS credentials to the repository.*
