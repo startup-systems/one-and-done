@@ -23,6 +23,14 @@ Vagrant.configure("2") do |config|
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
   # config.vm.network "forwarded_port", guest: 80, host: 8080
+  # Flask
+  config.vm.network "forwarded_port", guest: 5000, host: 5000
+  # Django
+  config.vm.network "forwarded_port", guest: 8000, host: 8000
+  # Display webpages served by server on VM on port 8080 on host machine
+  config.vm.network "forwarded_port", guest: 80, host: 8080
+
+
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
@@ -64,5 +72,15 @@ Vagrant.configure("2") do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
+
+  #config.vm.provision "shell", name: "root privisioning", inline: <<-SHELL
+  #echo "Updating sudoers"
+  # Set up sudo
+  #echo vagrant ALL=NOPASSWD:ALL > /etc/sudoers.d/vagrant
+  #chmod 0440 /etc/sudoers.d/vagrant
+  # Setup sudo to allow no-password sudo for "sudo"
+  #usermod -a -G sudo vagrant
+  #SHELL
+
   config.vm.provision "shell", path: "provision.sh"
 end
